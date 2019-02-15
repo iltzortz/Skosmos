@@ -241,7 +241,7 @@ class Model
             } else {
                 try {
                     $hitvoc = $this->getVocabularyByGraph($hit['graph']);
-                    $hit['vocab'] = $voc->getId();
+                    $hit['vocab'] = $hitvoc->getId();
                 } catch (Exception $e) {
                     trigger_error($e->getMessage(), E_USER_WARNING);
                     $hitvoc = null;
